@@ -1,0 +1,21 @@
+# weights / data / keys — never distribute
+*.pt
+*.bin
+*.safetensors
+*.gguf
+data/
+_store/
+*.key
+*.pem
+.env
+# python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
+# results (raw runs stay local; benchmark schema is in code)
+results.json
+*.log
