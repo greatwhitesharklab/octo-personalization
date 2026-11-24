@@ -42,6 +42,17 @@ python benchmarks/personalization/run_bench.py --model /path/to/Qwen3.5-0.8B --d
 ```
 预期 specificity `C0_thin < C1_rich < C2_force`。**排序**是稳健发现，绝对值随底座变。
 
+## 数据飞轮（`octo_flywheel/`）
+
+杠杆可抄，飞轮管道也可抄。**壁垒是你攒下的每客户数据**（记忆＋交互日志＋结果加权显著性），随每次交互复利——那归你。
+
+```
+交互(杠杆)→捕获→写回(覆盖)→巩固→反馈(结果加权显著性)→下次 ↺ （越用→记忆越厚→越个性化→更多数据）
+```
+- `octo_flywheel/` capture/writeback/consolidate/feedback/`Flywheel.step()`＋被遗忘权。
+- `demo/flywheel_demo.py` 复利演示（引用事实数随轮次升）。
+- 「学习」是朴素结果加权统计；抽取器＋outcome 是占位（真实产品接 LLM 抽取＋真实客户行为）。
+
 ## 姊妹项目
 - 🐱 [huamao-memory-bench](https://github.com/greatwhitesharklab/huamao-memory-bench) 原生 K/V 记忆引擎。
 - 🦫 [kapi-interactive-review](https://github.com/greatwhitesharklab/kapi-interactive-review) 交互式审查。

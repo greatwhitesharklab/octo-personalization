@@ -55,6 +55,20 @@ python benchmarks/personalization/run_bench.py --model /path/to/Qwen3.5-0.8B --d
 Expected: specificity `C0_thin < C1_rich < C2_force`. The *ordering* is the robust finding; absolute
 numbers vary by base model.
 
+## Data flywheel (`octo_flywheel/`)
+
+The lever is copyable; so is the flywheel plumbing. **The moat is the per-customer data you accumulate**
+(memory + interaction log + outcome-weighted salience), compounding with every interaction — that stays yours.
+
+```
+interact (lever) -> capture -> write-back (overwrite) -> consolidate -> feedback (outcome-weighted
+salience) -> next ↺   (more use -> richer memory -> better personalization -> more data)
+```
+- `octo_flywheel/` — capture / writeback / consolidate / feedback / `Flywheel.step()` + right-to-be-forgotten.
+- `demo/flywheel_demo.py` — compounding demo (referenced-fact count grows over turns).
+- The "learning" is plain outcome-weighted statistics; extractors + outcome signal are placeholders
+  (a real product fills them with an LLM extractor + actual customer behavior).
+
 ## Relation to sibling projects
 - 🐱 [huamao-memory-bench](https://github.com/greatwhitesharklab/huamao-memory-bench) — native writable K/V
   memory engine (the optional `BkvBackend` here wraps it).
