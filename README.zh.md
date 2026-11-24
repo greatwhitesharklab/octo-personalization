@@ -32,6 +32,7 @@
 - `benchmarks/personalization/` 可复现**利用缺口＋强制杠杆**基准，**0.8B/4B CPU**。
 - `tests/` 离线单测（无需模型/GPU）。
 - [`docs/zh/CLAIMS.md`](docs/zh/CLAIMS.md) 已证/已否证/待验。
+- [`docs/zh/EXPERIMENTS.md`](docs/zh/EXPERIMENTS.md) run-271→279 完整旅程：护城河假设如何一步步被否证。
 
 ## 快速上手
 ```bash

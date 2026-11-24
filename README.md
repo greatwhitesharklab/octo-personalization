@@ -42,6 +42,7 @@ negative-results-as-contribution.
 - `benchmarks/personalization/` — reproducible **utilization-gap + force-lever** benchmark, **0.8B/4B CPU**.
 - `tests/` — offline unit tests (no model weights / GPU needed).
 - [`docs/en/CLAIMS.md`](docs/en/CLAIMS.md) — demonstrated / falsified / pending, with negative results.
+- [`docs/en/EXPERIMENTS.md`](docs/en/EXPERIMENTS.md) — the full run-271→279 journey: how the moat hypothesis was falsified step by step.
 
 ## Quickstart
 ```bash
